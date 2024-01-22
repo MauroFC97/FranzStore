@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatea con nosotros</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/logoRecortado.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a title="inicio" href="../index.html">
+          <img src="../img/logoRecortado.jpeg" alt="" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul class="link">
+          <li><a href="register.html">Registro</a></li>
+          <li><a href="chatServidor.html">Contactanos</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn"><button>Ingresar</button></a>
+    </header>
+
+    <h1>Ventas</h1>
+    <form>
+      <div class="input-box">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="input-box">
+        <label for="message">Mensaje</label>
+        <input type="text" id="message" name="message" />
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+
+    <div class="chatSocket" id="chat"></div>
+    <div class="typingSocket" id="typing"></div>
+    <script src="js/scripts.js" type="module"></script>
+  </body>
+</html>

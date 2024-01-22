@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FranzStore</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/logoRecortado.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <form id="">
+      <label for="title" class="labelel">Title</label>
+      <input class="inputin" type="text" name="title" id="title" />
+      <label for="price">Precio</label>
+      <input class="inputin" type="number" name="price" id="price" />
+      <label for="description" class="labelel">Descripcion</label>
+      <input class="inputin" type="text" name="description" id="description" />
+      <label for="stock" class="labelel">Stock</label>
+      <input class="inputin" type="number" name="stock" id="stock" />
+      <label for="thumbnail" class="labelel">Imagen</label>
+      <input class="inputin" type="file" name="thumbnail" id="thumbnail" />
+      <label for="category" class="labelel">Categoria</label>
+      <input class="inputin" type="text" name="category" id="category" />
+      <button>Enviar</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch("/products", {
+          method: "POST",
+          body: data,
+        })
+          .then((res) => res.json())
+          .then(
+            (data) =>
+              (document.querySelector("#response").innerHTML = `
+                <p>Titulo: ${data.title}</p>
+                <p>Precio: ${data.price}</p>
+                <p>Descripcion: ${data.description}</p>
+                <p>Stock: ${data.stock}</p>
+                <img src="/uploads/${data.thumbnail}" alt="imagen"</p>
+                <p>Categoria: ${data.category}</p>
+                `)
+          )
+          .catch(
+            (err) =>
+              (document.querySelector("#response").innerHTML = `<p>${err}</p>`)
+          );
+      });
+    </script>
+  </body>
+</html>

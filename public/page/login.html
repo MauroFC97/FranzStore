@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../img/logoRecortado.jpeg"
+      type="image/x-icon"
+    />
+    <title>Inicio de Sesion</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a title="inicio" href="../index.html">
+          <img src="../img/logoRecortado.jpeg" alt="" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul class="link">
+          <li><a href="register.html">Registro</a></li>
+          <li><a href="chatServidor.html">Contacto</a></li>
+          <li><a href="chatServidor.html">Productos</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn"><button>Ingresar</button></a>
+    </header>
+    <section class="form-main">
+      <div class="form-content">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="box">
+          <h3>Bienvenido</h3>
+          <form id="login">
+            <div class="input-box">
+              <label for="userName" class="sr-only">Usuario</label>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                placeholder="Correo electronico"
+                class="input-control"
+              />
+            </div>
+            <div class="input-box">
+              <label for="password" class="sr-only"></label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Contraseña"
+                class="input-control"
+              />
+            </div>
+            <div class="input-box">
+              <div class="input-link">
+                <a href="recuperar.html" class="gradient-text"
+                  >Has olvidado tu contraseña</a
+                >
+              </div>
+            </div>
+            <button type="submit" class="btn">Iniciar sesiòn</button>
+            <div id="response"></div>
+          </form>
+          <p>No tienes una cuenta? <a href="register.html">Crear cuenta</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="datos">
+        <h3>Contactanos</h3>
+        <p>156 n°6743 - Berazategui</p>
+        <p><i>consultas@FranzStore</i></p>
+      </div>
+      <div class="red">
+        <h4>Nuestras Redes Sociales</h4>
+        <div>
+          <a href="#"><img src="../img/whatsapp.png" alt="whatsapp" /></a>
+          <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="../img/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/login.js" type="module"></script>
+  </body>
+</html>

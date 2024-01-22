@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="../img/logoRecortado.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a title="inicio" href="../index.html">
+          <img src="../img/logoRecortado.jpeg" alt="" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul class="link">
+          <li><a href="register.html">Registro</a></li>
+          <li><a href="chatServidor.html">Contactanos</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn"><button>Ingresar</button></a>
+    </header>
+    <section class="form-main">
+      <div class="form-content">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="box">
+          <h3>Crear una cuenta</h3>
+          <form id="register">
+            <div class="input-box">
+              <label for="firstName" class="sr-only">Nombre</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Nombre"
+                class="input-control"
+              />
+            </div>
+            <div class="input-box">
+              <label for="lastName" class="sr-only">Apellido</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Apellido"
+                class="input-control"
+              />
+            </div>
+            <div id="response"></div>
+            <div class="input-box">
+              <label for="userName" class="sr-only">Correo electronico</label>
+              <input
+                type="text"
+                placeholder="Correo electronico"
+                class="input-control"
+                name="userName"
+                id="userName"
+              />
+            </div>
+            <div class="input-box">
+              <label for="password" class="sr-only">Contraseña</label>
+              <input
+                type="password"
+                placeholder="Password"
+                class="input-control"
+                name="password"
+                id="password"
+              />
+            </div>
+
+            <button type="submit" class="btn">Crear Cuenta</button>
+          </form>
+          <p>
+            Ya tienes una cuenta?
+            <a href="login.html">Inicar sesion</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="datos">
+        <h3>Contactanos</h3>
+        <p>156 n°6743 - Berazategui</p>
+        <p><i>consultas@FranzStore</i></p>
+      </div>
+      <div class="red">
+        <h4>Nuestras Redes Sociales</h4>
+        <div>
+          <a href="#"><img src="../img/whatsapp.png" alt="whatsapp" /></a>
+          <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="../img/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/register.js" type="module"></script>
+  </body>
+</html>
